@@ -1,0 +1,50 @@
+/* *{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aliceblue;
+  padding: 1rem;
+
+}
+
+.Card {
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgb(167, 167, 167);
+  gap: 1rem;
+
+}
+
+.Character-image {
+  aspect-ratio: 12/16;
+  min-width: 300px;
+  overflow: hidden;
+
+}
+
+.Character-image img {
+  width: 100%;
+} 
+
+.Name {
+  font-size: 2rem;
+}
+
+.Cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+
+}  */
+

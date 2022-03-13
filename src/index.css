@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffff;
+}
+
+.box {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem gray;
+}
+
+.grid-responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+
+.gallery-cell {
+  height: 386px;
+  padding-right:15px;
+}
+@media (min-width: 300px) and (max-width: 420px) {
+  .gallery-cell {
+      height: 286px !important;
+      
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-cell {
+      padding-right:0;
+  }
+}
+
+.carousel__sliderLarge {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* gives us the illusion of spaces between the slides */
+.carousel__inner-slideLarge {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  left: 10px;
+  top: 10px;
+  
+}
+
+
