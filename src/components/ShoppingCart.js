@@ -1,11 +1,12 @@
 import { type } from "@testing-library/user-event/dist/type";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import { TYPES } from "./actions/shoppingAction";
 import CartItem from "./CartItem";
 import Productitem from "./Productitem";
 import { shoppingReducer, shoppingInitialState } from "./reducers/shoppingReducer";
 
 const ShoppingCart = () => {
+  const [whatsappmensaje, setwhatsappmensaje] = useState("");
   const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
   const { products, cart } = state;
 
@@ -38,6 +39,18 @@ const ShoppingCart = () => {
       dispatch({type: TYPES.FILTER_BY_CATEGORY, payload:e.target.value})
     }
   }
+  const whatsapp = () => {
+
+    
+    let message = `Hola Yey, me gustaria pedir: ${cart.map((item) => {
+      return (
+          item.name 
+      )
+  })}\n\nTOTAL sin domicilio: ${sumTotal()}`
+  message = encodeURI(message)
+  return message
+  }
+
 
   const clearCart = () => {
     dispatch({ type: TYPES.CLEAR_CART })
@@ -74,7 +87,8 @@ const ShoppingCart = () => {
       <h3>Carrito</h3>
       <article className='box flex flex-col gap-4 text-black'>
 
-        
+     <a onClick={()=>setwhatsappmensaje(whatsapp)} href={`https://api.whatsapp.com/send?phone=+573006021099&text=${whatsappmensaje}`}> <button className="border-2 border-black px-2 bg-gray-300 hover:bg-gray-400 rounded" > Whatsapp </button>
+     </a>
 
         <button className="border-2 border-black px-2 bg-gray-300 hover:bg-gray-400 rounded" onClick={clearCart}> Limpiar Carrito </button>
         {cart.map((item, index) =>
