@@ -7,8 +7,14 @@ export const shoppingInitialState = {
         {id:3,image:"zportabastidor.jpg", name:"Portabastidor", price:180000, categoria: "para bordar", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
         {id:4,image:"zbordadop1.jpg", name:"Bordado Outline", price:120000, categoria: "bordado personalizado", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
         {id:5, image:"zbordadop2.jpg", name:"Bordado Outline + ilustración", price:170000, categoria: "bordado personalizado", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
-        {id:6, image:"zbordadop3.jpg", name:"Bordado de mascotas", price:230000, categoria: "productos bordados", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
-        
+        {id:6, image:"zbordadop3.jpg", name:"Bordado de mascotas", price:230000, categoria: "bordado personalizado", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:7, image:"zcollar.jpg", name:"Collares Bordados", price:70000, categoria: "productos bordados", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:8, image:"zmoño.jpg", name:"Moños Bordados", price:25000, categoria: "productos bordados", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:9, image:"zllavero.jpeg", name:"Llaveros Bordados", price:25000, categoria: "productos bordados", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:10, image:"zmesa.jpg", name:"Mesa lunar", price:190000, categoria: "para bordar", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:11, image:"aurora.jpg", name:"Costurero Aurora", price:115000, categoria: "para bordar", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+        {id:12, image:"zkitbordadofloral.jpg", name:"Kit de Bordado Floral", price:90000, categoria: "para bordar", descripcion:"fnjihdsfnjdsnjldsljndslnjdsdsf"},
+
     
     ],
     cart:[],

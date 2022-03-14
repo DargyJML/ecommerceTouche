@@ -4,14 +4,13 @@ import { TYPES } from "./actions/shoppingAction";
 import CartItem from "./CartItem";
 import Productitem from "./Productitem";
 import { shoppingReducer, shoppingInitialState } from "./reducers/shoppingReducer";
-import Filtro from "./Filtro";
 
 const ShoppingCart = () => {
   const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
   const { products, cart } = state;
 
   const addToCart = (id) => {
-    /* console.log(id);  */
+    
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   }
   const delFromCart = (id, all = false) => {
@@ -38,18 +37,15 @@ const ShoppingCart = () => {
     }else{
       dispatch({type: TYPES.FILTER_BY_CATEGORY, payload:e.target.value})
     }
-
   }
 
   const clearCart = () => {
     dispatch({ type: TYPES.CLEAR_CART })
   }
 
-
   return (
     <div>
       <div> <h1 className="text-center text-5xl font-bold text-black "> Productos</h1> </div>
-      {/*  <Filtro/> */}
 
       <div className="right-full">
         <select onChange={handleChange} className="select select-bordered border-black text-black bg-transparent w-full max-w-xs right-full">
@@ -73,9 +69,12 @@ const ShoppingCart = () => {
 
 
 
+
       </article>
       <h3>Carrito</h3>
       <article className='box flex flex-col gap-4 text-black'>
+
+        
 
         <button className="border-2 border-black px-2 bg-gray-300 hover:bg-gray-400 rounded" onClick={clearCart}> Limpiar Carrito </button>
         {cart.map((item, index) =>
@@ -87,4 +86,4 @@ const ShoppingCart = () => {
   );
 };
 
-export default ShoppingCart;
+export default ShoppingCart; 
